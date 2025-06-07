@@ -74,3 +74,12 @@ resource "cloudflare_dns_record" "lorenzoregalado-blog" {
   proxied = true
   zone_id = "ff0df890eae549199f4de265c3290868"
 }
+
+resource "cloudflare_dns_record" "lorenzoregalado-com-cname" {
+  name    = "lorenzoregalado.com"
+  type    = "CNAME"
+  ttl     = 1
+  content = "lorenzoregalado-com.pages.dev"
+  proxied = true
+  zone_id = "ff0df890eae549199f4de265c3290868"
+}
